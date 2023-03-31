@@ -1,0 +1,73 @@
+---
+title: "Midterm Report"
+author: "Noah Coleman"
+date: "2023-03-31"
+output: html_document
+---
+
+```{r setup, include=FALSE,message=FALSE,}
+knitr::opts_chunk$set(echo = TRUE)
+#creating source path for shot chart functions
+source("midterm_source.R")
+```
+##Purpose
+
+--I was asked to create a shot chart of the past 25 years of Bucks Basketball, with the hopes of offering insights into how offense has shifted throughout the years.
+
+--Within this will also be some further analysis of shot chart and corresponding statistics.
+
+##Shot Chart
+
+The below shot chart attempts to show the shifting nature of shots taken by Bucks players throughout the regular season
+```{r, echo=FALSE,message=FALSE,fig.width=60}
+bucks_anim
+```
+
+A few insights using the shot charts created:
+-Pre 2012, most 3s concentrated around corner 3s; still find concentration there, but concentration has also migrated to the wings as well.
+
+-Number of short corner mid range shots decrease in concentration around 2008-2009, even before the Renaissance of 3's.
+Post 2015, shots inside of the 3-point line are much more heavily concentrated around and in front of the basket, with mid-ranges being phased out.
+
+-3-Pt Attempts skyrocket after Warriors dynasty, around 2015
+
+##3-Point Rennasaince
+
+To allude to the last point of our insights, the talk of how offenses have evolved is all bout the focus of the 3-Pointer. But how much have offenses shifted?
+
+```{r,echo=FALSE,message=FALSE}
+bucks_3graph
+```
+
+
+-3-Pt Attempts do increase post Curry MVP Season. However attempts only truly exploded in 2019, the year after new head coach Mike Budenholzer is hired.
+
+-Looking back at shot chart of the 1999 season having much less data points, as well as the minimum 3 pointers attempted in the 25-year span, can be contributed to the lockout during the 1999 season which caused teams to miss nearly 40% of the regular season games.
+
+With explosion of 3-Pointers attempted, one might assume that 3-Point Shooters are hitting at a higher than tic than those of days past.
+
+```{r,echo=FALSE,message=FALSE}
+bucks_pct3graph
+```
+
+-Rather, 3 Point Shooting Percentages have stagnated and does not appear to have followed any trend or change.
+
+-Shooters are not shooting at a consistently higher percentage from the 3, why continually increase number of attempts?
+
+The answer is simple. Shooting 3's are more effective.
+
+```{r,echo=FALSE,message=FALSE}
+bucks_efggraph
+```
+
+-Effective Field Goal Percentage is created with the intent of understanding that a 3 made is worth more than a made 2. All that is done to calculate EFG% is (FGM + (.5*3PM))/FGA. This means that each EFG generates at what rate a player can generate points, not just field goals made.
+
+-Effective Field Goal Percentage is slowly rising, specifically seeing uptick as 3-Pointers Attempted increase.
+
+-This is a general sign of more talented shooters in the league, these players are holding the same percentages while shooting with far more volume, making them more statistically consistent shooters than past players.
+
+##Recommendations
+
+With this information, that more consistent shooters are within the league, while also learning that shooting 3's is statistically more effective than mid-ranges:
+-Players should develop around-the-rim prowess and 3PT Shooting first. Mid-range jump shots and post play is inefficient with exceptions for the highest level of talent.
+-Players like our very own Brook Lopez should be the blueprint: A great big-man, with a 37% 3-Point Shooting % while being solid around the rim and a great defender.
